@@ -7,11 +7,17 @@
 .endproc
 
 .proc nmi_handler
+  PHA
+  PHP
+
   RTI
   LDA #$00                      ; will transfer to PPU 00
   STA OAMADDR
   LDA #$02                      ; tranfer page from $0200
   STA OAMDMA
+
+  PLP
+  PLA
 .endproc
 
 .import reset_handler

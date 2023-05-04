@@ -1,0 +1,18 @@
+save_registry: MACRO
+  PHP
+  PHA
+  TXA
+  PHA
+  TYA
+  PHA
+ENDM
+
+restore_registry: MACRO
+  PLA
+  TAY
+  PLA
+  TAX
+  PLA
+  PLP
+  RTS
+ENDM

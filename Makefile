@@ -1,4 +1,4 @@
-INC = constants.inc header.inc
+INC = constants.inc header.inc guard_registry.mac
 SRC = main.s reset.s
 OBJ = ${SRC:.s=.o}
 CFG = nes.cfg
