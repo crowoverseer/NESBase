@@ -40,6 +40,12 @@ forever:
   JMP forever
 .endproc
 
+.segment "ZEROPAGE"
+player_x: .res 1
+player_y: .res 1
+pad1: .res 1
+.exportzp player_x, player_y, pad1
+
 .segment "VECTORS"
 .addr nmi_handler, reset_handler, irq_handler
 
