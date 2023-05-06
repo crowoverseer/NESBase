@@ -1,13 +1,13 @@
-save_registry: MACRO
+.macro Save_registry
   PHP
   PHA
   TXA
   PHA
   TYA
   PHA
-ENDM
+.endmacro
 
-restore_registry: MACRO
+.macro Restore_registry
   PLA
   TAY
   PLA
@@ -15,4 +15,4 @@ restore_registry: MACRO
   PLA
   PLP
   RTS
-ENDM
+.endmacro
