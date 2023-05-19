@@ -16,6 +16,9 @@
   LDA #$02                      ; tranfer page from $0200
   STA OAMDMA
 
+  LDX #$00
+  STX current_sprite
+
   PLP
   PLA
 .endproc
@@ -44,7 +47,9 @@ forever:
 player_x: .res 1
 player_y: .res 1
 pad1: .res 1
-.exportzp player_x, player_y, pad1
+current_sprite: .res 1
+buffer:  .res 1
+.exportzp player_x, player_y, pad1, current_sprite, buffer
 
 .segment "VECTORS"
 .addr nmi_handler, reset_handler, irq_handler

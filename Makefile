@@ -1,5 +1,5 @@
-INC = constants.inc header.inc guard_registry.mac
-SRC = main.s reset.s player_controls.s
+INC = constants.inc header.inc object_states.inc guard_registry.mac
+SRC = main.s reset.s player_controls.s draw_sprite.s
 OBJ = ${SRC:.s=.o}
 CFG = nes.cfg
 
